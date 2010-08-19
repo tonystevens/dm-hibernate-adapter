@@ -4,15 +4,18 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "dm-hibernate-adapter"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.name = 'dm-hibernate-adapter'
+    gem.summary = 'Connection between Hibernate and DataMapper'
+    gem.description = gem.summary
     gem.email = "tonywdzyj@gmail.com"
     gem.homepage = "http://github.com/tonystevens/dm-hibernate-adapter"
     gem.authors = ["tonystevens"]
+
+    gem.add_dependency 'dm-core', '~> 1.0.0'
+
     gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
+
   Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
